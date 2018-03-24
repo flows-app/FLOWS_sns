@@ -1,0 +1,5 @@
+{
+  "target":"test@domain.com",
+  "subject":"test subject",
+  "body":" test body"
+}
