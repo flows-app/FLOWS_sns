@@ -1,0 +1,47 @@
+{
+    "id": "FLOWS/sns/sendmail",
+    "lambda": "lambda-arn",
+    "role": "iam-arn",
+    "input": {
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "description": "basic email structure",
+            "type": "object",
+            "properties": {
+                "target": {
+                    "type": "string"
+                },
+                "subject": {
+                    "type": "string"
+                },
+                "body": {
+                      "type": "string"
+                  }
+            },
+            "required": ["target"]
+        },
+        "examples": {
+            "samplemail": {
+              "target":"test@domain.com",
+              "subject":"test subject",
+              "body":" test body"
+            }
+        }
+    },
+    "output": {
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "description": "to be defined",
+            "type": "object"
+        },
+        "examples": {
+            "result": {
+                "name": "value"
+            }
+        }
+    },
+    "type": "task",
+    "description": "sends email notifications",
+    "icon": "https://flows.app/favicon.png",
+    "billing": "standard"
+}
