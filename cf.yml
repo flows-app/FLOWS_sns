@@ -8,7 +8,7 @@ Resources:
       Handler: index.handler
       Role:
         Fn::GetAtt: [ LambdaRole , Arn ]
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       Timeout: 300
       Environment:
         Variables:
@@ -34,7 +34,6 @@ Resources:
             Statement:
             - Effect: Allow
               Action:
-              - logs:CreateLogGroup
               - logs:CreateLogStream
               - logs:PutLogEvents
               Resource: arn:aws:logs:*:*:*
